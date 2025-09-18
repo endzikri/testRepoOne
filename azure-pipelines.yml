@@ -6,7 +6,11 @@
 trigger:
 - main
 
-pool: default
+pr:
+  autoCancel: true
+
+pool:
+  vmImage: ubuntu-latest
 
 steps:
 - script: echo Hello, world!
@@ -15,4 +19,5 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
+    sleep 300
   displayName: 'Run a multi-line script'
